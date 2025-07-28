@@ -1,0 +1,144 @@
+[
+
+    {
+        "type": "vocab_meaning",
+        "question": "甘い",
+        "options": ["pahit", "manis", "asin", "asam"],
+        "correct": 1,
+        "subtext": "Pilih arti yang tepat"
+    },
+    {
+        "type": "vocab_meaning",
+        "question": "辛い",
+        "options": ["pedas", "pahit", "manis", "hambar"],
+        "correct": 0,
+        "subtext": "Pilih arti yang tepat"
+    },
+    {
+        "type": "vocab_meaning",
+        "question": "苦い",
+        "options": ["asin", "asam", "pahit", "enak"],
+        "correct": 2,
+        "subtext": "Pilih arti yang tepat"
+    },
+    {
+        "type": "vocab_meaning",
+        "question": "お湯",
+        "options": ["air dingin", "air es", "air mendidih", "air panas"],
+        "correct": 3,
+        "subtext": "Pilih arti yang tepat"
+    },
+    {
+        "type": "vocab_meaning",
+        "question": "料理",
+        "options": ["minuman", "bahan", "masakan", "alat"],
+        "correct": 2,
+        "subtext": "Pilih arti yang tepat"
+    },
+    {
+        "type": "meaning_vocab",
+        "question": "Rasa",
+        "options": ["卵", "料理", "お湯", "味"],
+        "correct": 3,
+        "subtext": "Pilih kosakata yang tepat"
+    },
+    {
+        "type": "meaning_vocab",
+        "question": "Telur",
+        "options": ["味", "卵", "苦手", "辛い"],
+        "correct": 1,
+        "subtext": "Pilih kosakata yang tepat"
+    },
+    {
+        "type": "meaning_vocab",
+        "question": "Mengaduk",
+        "options": ["注ぐ", "混ぜる", "捨てる", "かける"],
+        "correct": 1,
+        "subtext": "Pilih kosakata yang tepat"
+    },
+    {
+        "type": "meaning_vocab",
+        "question": "Menuangkan",
+        "options": ["注ぐ", "混ぜる", "捨てる", "かける"],
+        "correct": 0,
+        "subtext": "Pilih kosakata yang tepat"
+    },
+    {
+        "type": "meaning_vocab",
+        "question": "Kenyang",
+        "options": ["もう１つ", "お腹がいっぱい", "どんどん", "苦手"],
+        "correct": 1,
+        "subtext": "Pilih kosakata yang tepat"
+    },
+    {
+        "type": "vocab_reading",
+        "question": "味",
+        "options": ["たまご", "からい", "あじ", "にがて"],
+        "correct": 2,
+        "subtext": "Pilih cara baca yang tepat"
+    },
+    {
+        "type": "vocab_reading",
+        "question": "料理",
+        "options": ["にがて", "りょうり", "すこし", "からい"],
+        "correct": 1,
+        "subtext": "Pilih cara baca yang tepat"
+    },
+    {
+        "type": "vocab_reading",
+        "question": "卵",
+        "options": ["たまご", "あじ", "りょうり", "おゆ"],
+        "correct": 0,
+        "subtext": "Pilih cara baca yang tepat"
+    },
+    {
+        "type": "vocab_reading",
+        "question": "苦手",
+        "options": ["すこし", "おゆ", "にがて", "あまい"],
+        "correct": 2,
+        "subtext": "Pilih cara baca yang tepat"
+    },
+    {
+        "type": "reading_meaning",
+        "question": "おいしい",
+        "options": ["tidak enak", "enak", "hambar", "pahit"],
+        "correct": 1,
+        "subtext": "Pilih arti yang tepat"
+    },
+    {
+        "type": "reading_meaning",
+        "question": "まずい",
+        "options": ["enak", "hambar", "tidak enak", "manis"],
+        "correct": 2,
+        "subtext": "Pilih arti yang tepat"
+    },
+    {
+        "type": "reading_meaning",
+        "question": "たまごやき",
+        "options": ["telur mata sapi", "telur rebus", "sup telur", "telur dadar gulung"],
+        "correct": 3,
+        "subtext": "Pilih arti yang tepat"
+    },
+    {
+        "type": "reading_meaning",
+        "question": "からあげ",
+        "options": ["ayam goreng", "ayam bakar", "sate ayam", "sup ayam"],
+        "correct": 0,
+        "subtext": "Pilih arti yang tepat"
+    },
+    {
+        "type": "reading_meaning",
+        "question": "きのこ",
+        "options": ["sup", "puding", "jamur", "kaldu"],
+        "correct": 2,
+        "subtext": "Pilih arti yang tepat"
+    },
+    {
+        "type": "reading_meaning",
+        "question": "プリン",
+        "options": ["puding", "sup", "jamur", "kaldu"],
+        "correct": 0,
+        "subtext": "Pilih arti yang tepat"
+    }
+
+]

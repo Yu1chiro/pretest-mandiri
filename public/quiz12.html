@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Start</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap');
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .timer-ring {
+            transform: rotate(-90deg);
+            transform-origin: 50% 50%;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 min-h-screen">
+    <div class="bg-blue-300 min-h-screen flex items-center justify-center px-4">
+        <div class="max-w-md w-full">
+            <!-- Header -->
+             <!-- Header -->
+            <header class="bg-blue-600 shadow-lg mb-10 mt-10">
+                <div class="container mx-auto px-4 py-3">
+                    <div class="flex justify-between items-center">
+                        <div class="flex items-center space-x-4">
+                            <h1 class="text-2xl font-bold text-white">Point Kamu</h1>
+                        </div>
+                        <div class="bg-blue-700 rounded-full px-6 py-2 shadow-md">
+                            <span class="text-2xl font-bold text-white" id="scoreDisplay">0</span>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Quiz Card -->
+            <div id="quizCard" class="bg-white rounded-3xl shadow-2xl p-6 mb-20">
+                <!-- Progress Bar -->
+                <div class="flex justify-between items-center mb-6">
+                    <div class="text-sm text-gray-600">Soal <span id="currentQuestion">1</span></div>
+                    <div class="w-16 h-16 relative">
+                        <svg class="w-16 h-16" viewBox="0 0 36 36">
+                            <path class="text-gray-200" stroke="currentColor" stroke-width="2" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"></path>
+                            <path id="timerPath" class="text-red-500 timer-ring" stroke="currentColor" stroke-width="2" fill="none" stroke-dasharray="100, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"></path>
+                        </svg>
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <span id="timerText" class="text-lg font-bold text-gray-700">60</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question -->
+                <div class="mb-8">
+                    <div id="questionType" class="inline-block bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium mb-4">
+                        Vocab → Meaning
+                    </div>
+                    <h2 id="questionText" class="text-4xl font-bold text-gray-800 mb-2 text-center">
+                        肉
+                    </h2>
+                    <p id="questionSubtext" class="text-gray-600 text-center text-sm">
+                        Pilih arti yang tepat
+                    </p>
+                </div>
+
+                <!-- Options -->
+                <div id="optionsContainer" class="space-y-3">
+                    <!-- Options will be dynamically generated -->
+                </div>
+            </div>
+            <div class="fixed inset-x-0 bottom-0 bg-white shadow-lg border-t border-gray-200">
+            <div class="flex justify-around">
+                <!-- Home Nav -->
+                <a href="/" class="flex flex-col items-center py-3 px-6 text-gray-500 hover:text-blue-600">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                </svg>
+                <span class="text-xs mt-1">Home</span>
+                </a>
+                
+                <!-- Stats Nav -->
+                <a href="/statistics" class="flex flex-col items-center py-3 px-6 text-gray-500 hover:text-blue-600">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                </svg>
+                <span class="text-xs mt-1">Statistik</span>
+                </a>
+            </div>
+            </div>
+        </div>
+    </div>
+<script>
+  const questionText = document.getElementById("questionText");
+
+  // Mencegah blok teks (drag select)
+  questionText.style.userSelect = "none";
+
+  // Mencegah klik kanan (context menu)
+  questionText.addEventListener("contextmenu", function(e) {
+    e.preventDefault();
+  });
+
+  // Mencegah copy (Ctrl+C atau klik kanan > Copy)
+  questionText.addEventListener("copy", function(e) {
+    e.preventDefault();
+  });
+
+  // Tambahan untuk mencegah drag
+  questionText.addEventListener("dragstart", function(e) {
+    e.preventDefault();
+  });
+</script>
+
+    <script>
+        // Complete Quiz JavaScript dengan localStorage dan fetch JSON
+let quizData = [];
+let currentQuestionIndex = 0;
+let score = 0;
+let timer;
+let timeLeft = 35;
+let quizResults = []; // Menyimpan hasil per soal
+
+// Fetch quiz data dari file JSON
+async function loadQuizData() {
+    try {
+        const response = await fetch('/Quiz/data12.json');
+        if (!response.ok) {
+            throw new Error('File JSON tidak ditemukan');
+        }
+        quizData = await response.json();
+        console.log('Quiz data loaded from JSON:', quizData.length, 'questions');
+        return true;
+    } catch (error) {
+        console.warn('Error loading quiz data from JSON:', error.message);
+        console.log('Menggunakan data default...');
+        // Fallback ke data default dari kode asli
+        quizData = getDefaultQuizData();
+        return false;
+    }
+}
+
+// Data default sebagai fallback (dari kode asli Anda)
+
+// Fisher-Yates shuffle algorithm (dari kode asli)
+function getCryptoRandomInt(max) {
+    // Gunakan crypto.getRandomValues jika tersedia (lebih aman)
+    if (window.crypto && window.crypto.getRandomValues) {
+        const randomBuffer = new Uint32Array(1);
+        window.crypto.getRandomValues(randomBuffer);
+        return randomBuffer[0] % (max + 1);
+    } 
+    // Fallback ke Math.random() jika crypto tidak tersedia
+    return Math.floor(Math.random() * (max + 1));
+}
+
+// Enhanced Fisher-Yates shuffle dengan kriptografi acak
+function cryptoShuffleArray(array) {
+    const shuffled = [...array];
+    for (let i = shuffled.length - 1; i > 0; i--) {
+        // Gunakan random generator kriptografis
+        const j = getCryptoRandomInt(i);
+        [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+    }
+    return shuffled;
+}
+
+// Fungsi untuk mengacak urutan soal
+function shuffleQuestions(questions) {
+    return cryptoShuffleArray(questions);
+}
+function getQuestionTypeText(type) {
+    switch(type) {
+        case "vocab_meaning": return "Vocab → Meaning";
+        case "meaning_vocab": return "Meaning → Vocab";
+        case "vocab_reading": return "Vocab → Reading";
+        case "reading_meaning": return "Reading → Meaning";
+        default: return "Quiz";
+    }
+}
+
+function getQuestionTypeColor(type) {
+    switch(type) {
+        case "vocab_meaning": return "bg-blue-100 text-blue-800";
+        case "meaning_vocab": return "bg-green-100 text-green-800";
+        case "vocab_reading": return "bg-yellow-100 text-yellow-800";
+        case "reading_meaning": return "bg-purple-100 text-purple-800";
+        default: return "bg-gray-100 text-gray-800";
+    }
+}
+
+// Fungsi untuk menyimpan hasil kuis per soal
+function saveQuizResult(questionIndex, isCorrect, selectedAnswer, correctAnswer, timeSpent) {
+    const result = {
+        questionNumber: questionIndex + 1,
+        question: quizData[questionIndex].question,
+        type: quizData[questionIndex].type,
+        selectedAnswer: selectedAnswer,
+        correctAnswer: correctAnswer,
+        isCorrect: isCorrect,
+        timeSpent: timeSpent,
+        timestamp: new Date().toISOString()
+    };
+    
+    quizResults.push(result);
+}
+
+// Menyimpan statistik ke localStorage
+function saveStatistics() {
+    try {
+        const stats = {
+            totalQuestions: quizData.length,
+            correctAnswers: score,
+            wrongAnswers: quizData.length - score,
+            percentage: Math.round((score / quizData.length) * 100),
+            results: quizResults,
+            completedAt: new Date().toISOString()
+        };
+        
+        // Simpan hasil kuis terbaru
+        localStorage.setItem('latestQuizResult', JSON.stringify(stats));
+        
+        // Simpan ke history (maksimal 10 hasil terakhir)
+        let history = JSON.parse(localStorage.getItem('quizHistory') || '[]');
+        history.unshift(stats);
+        if (history.length > 10) {
+            history = history.slice(0, 10);
+        }
+        localStorage.setItem('quizHistory', JSON.stringify(history));
+        
+        console.log('Statistik berhasil disimpan');
+    } catch (error) {
+        console.warn('Error saving to localStorage:', error);
+    }
+}
+
+function startTimer() {
+    timeLeft = 35;
+    updateTimerDisplay();
+    
+    timer = setInterval(() => {
+        timeLeft--;
+        updateTimerDisplay();
+        
+        if (timeLeft <= 0) {
+            clearInterval(timer);
+            timeUp();
+        }
+    }, 1000);
+}
+
+function updateTimerDisplay() {
+    document.getElementById('timerText').textContent = timeLeft;
+    const percentage = (timeLeft / 60) * 100;
+    document.getElementById('timerPath').style.strokeDasharray = `${percentage}, 100`;
+    
+    // Change color based on time left
+    const timerPath = document.getElementById('timerPath');
+    if (timeLeft <= 10) {
+        timerPath.classList.remove('text-yellow-500', 'text-green-500');
+        timerPath.classList.add('text-red-500');
+    } else if (timeLeft <= 30) {
+        timerPath.classList.remove('text-red-500', 'text-green-500');
+        timerPath.classList.add('text-yellow-500');
+    } else {
+        timerPath.classList.remove('text-red-500', 'text-yellow-500');
+        timerPath.classList.add('text-green-500');
+    }
+}
+
+function timeUp() {
+    // Simpan hasil untuk soal yang tidak dijawab
+    const selectedAnswer = "Tidak dijawab";
+    const correctAnswer = quizData[currentQuestionIndex].options[quizData[currentQuestionIndex].correct];
+    saveQuizResult(currentQuestionIndex, false, selectedAnswer, correctAnswer, 60);
+    
+    Swal.fire({
+        title: '⏰ Waktu Kamu Habis!',
+        text: 'Resiko Kehabisan Waktu Adalah Review',
+        icon: 'warning',
+        confirmButtonText: 'Siap',
+        confirmButtonColor: '#667eea',
+        background: '#fff',
+        customClass: {
+            popup: 'rounded-2xl'
+        }
+    }).then(() => {
+        currentQuestionIndex = 0;
+        displayQuestion();
+    });
+}
+
+// Tambahkan progress bar
+function updateProgressBar() {
+    const progress = ((currentQuestionIndex + 1) / quizData.length) * 100;
+    let progressBar = document.querySelector('.progress-bar');
+    
+    if (!progressBar) {
+        progressBar = document.createElement('div');
+        progressBar.className = 'progress-bar w-full bg-gray-200 rounded-full h-2 mb-4';
+        const header = document.querySelector('#quizCard .flex.justify-between');
+        header.parentNode.insertBefore(progressBar, header.nextSibling);
+    }
+    
+    progressBar.innerHTML = `<div class="bg-purple-600 h-2 rounded-full transition-all duration-300" style="width: ${progress}%"></div>`;
+}
+
+function displayQuestion() {
+    clearInterval(timer);
+    
+    const question = quizData[currentQuestionIndex];
+    const shuffledIndices = cryptoShuffleArray([0, 1, 2, 3]);
+    const shuffledOptions = shuffledIndices.map(i => question.options[i]);
+    const newCorrectIndex = shuffledIndices.indexOf(question.correct);
+    // Update question number and type
+    document.getElementById('currentQuestion').textContent = currentQuestionIndex + 1;
+    document.getElementById('questionType').textContent = getQuestionTypeText(question.type);
+    document.getElementById('questionType').className = `inline-block px-3 py-1 rounded-full text-sm font-medium mb-4 ${getQuestionTypeColor(question.type)}`;
+    
+    // Update question text
+    document.getElementById('questionText').textContent = question.question;
+    document.getElementById('questionSubtext').textContent = question.subtext;
+    
+    // Update progress bar
+    updateProgressBar();
+    
+    
+    // Create options
+    const optionsContainer = document.getElementById('optionsContainer');
+    optionsContainer.innerHTML = '';
+    
+    shuffledOptions.forEach((option, index) => {
+        const button = document.createElement('button');
+        button.className = 'w-full p-4 text-left bg-gray-50 hover:bg-gray-100 rounded-xl border-2 border-transparent hover:border-purple-300 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-purple-500';
+        button.innerHTML = `
+            <div class="flex items-center justify-between">
+                <span class="text-gray-800 font-medium">${option}</span>
+                <span class="text-2xl">${String.fromCharCode(65 + index)}</span>
+            </div>
+        `;
+        
+        button.addEventListener('click', () => selectAnswer(index, newCorrectIndex, shuffledOptions));
+        optionsContainer.appendChild(button);
+    });
+    
+    startTimer();
+}
+
+// Enhanced selectAnswer function
+function selectAnswer(selectedIndex, correctIndex, shuffledOptions) {
+    clearInterval(timer);
+    
+    const buttons = document.querySelectorAll('#optionsContainer button');
+    const selectedAnswer = shuffledOptions[selectedIndex];
+    const correctAnswer = shuffledOptions[correctIndex];
+    const isCorrect = selectedIndex === correctIndex;
+    const timeSpent = 60 - timeLeft;
+    
+    // Simpan hasil soal ini
+    saveQuizResult(currentQuestionIndex, isCorrect, selectedAnswer, correctAnswer, timeSpent);
+    
+    // Disable all buttons
+    buttons.forEach(btn => btn.disabled = true);
+    
+    // Show correct/incorrect with enhanced animation
+    buttons[selectedIndex].classList.remove('bg-gray-50', 'hover:bg-gray-100');
+    buttons[correctIndex].classList.remove('bg-gray-50', 'hover:bg-gray-100');
+    
+    if (isCorrect) {
+        buttons[selectedIndex].classList.add('bg-green-100', 'border-green-500', 'text-green-800');
+        score++;
+        
+        // Tambahkan efek visual
+        showSuccessAnimation();
+        
+        Swal.fire({
+            title: '🎉 Benar!',
+            text: `Kecepatan menjawab anda : ${timeSpent}s`,
+            icon: 'success',
+            timer: 1500,
+            showConfirmButton: false,
+            background: '#fff',
+            customClass: {
+                popup: 'rounded-2xl'
+            }
+        });
+    } else {
+        buttons[selectedIndex].classList.add('bg-red-100', 'border-red-500', 'text-red-800');
+        buttons[correctIndex].classList.add('bg-green-100', 'border-green-500', 'text-green-800');
+        
+        Swal.fire({
+            title: '❌ Salah!',
+            html: `Jawaban benar: <strong>${correctAnswer}</strong>`,
+            icon: 'error',
+            timer: 2500,
+            showConfirmButton: false,
+            background: '#fff',
+            customClass: {
+                popup: 'rounded-2xl'
+            }
+        });
+    }
+    
+    // Update score display dengan animasi
+    const scoreElement = document.getElementById('scoreDisplay');
+    scoreElement.textContent = score;
+    scoreElement.classList.add('animate-bounce');
+    setTimeout(() => scoreElement.classList.remove('animate-bounce'), 500);
+    
+    // Move to next question after delay
+    setTimeout(() => {
+        currentQuestionIndex++;
+        if (currentQuestionIndex < quizData.length) {
+            displayQuestion();
+        } else {
+            finishQuiz();
+        }
+    }, 2500);
+}
+
+// Animasi sukses
+function showSuccessAnimation() {
+    const quizCard = document.getElementById('quizCard');
+    quizCard.style.transform = 'scale(1.02)';
+    quizCard.style.boxShadow = '0 0 30px rgba(34, 197, 94, 0.3)';
+    
+    setTimeout(() => {
+        quizCard.style.transform = 'scale(1)';
+        quizCard.style.boxShadow = '';
+    }, 300);
+}
+
+// Fungsi untuk menyelesaikan kuis
+function finishQuiz() {
+    saveStatistics();
+    showFinalResult();
+}
+
+// Enhanced showFinalResult dengan opsi lihat statistik
+function showFinalResult() {
+    const percentage = Math.round((score / quizData.length) * 100);
+    let title, text, icon;
+    
+    if (percentage >= 80) {
+        title = '🏆 Luar Biasa!';
+        text = `Skor Anda: ${score}/${quizData.length} (${percentage}%)`;
+        icon = 'success';
+    } else if (percentage >= 60) {
+        title = '👍 Bagus!';
+        text = `Skor Anda: ${score}/${quizData.length} (${percentage}%)`;
+        icon = 'success';
+    } else {
+        title = '💪 Tetap Semangat!';
+        text = `Skor Anda: ${score}/${quizData.length} (${percentage}%) - Ayo coba lagi!`;
+        icon = 'info';
+    }
+    
+    Swal.fire({
+        title: title,
+        html: `${text}<br><small class="text-gray-500">Hasil telah disimpan!</small>`,
+        icon: icon,
+        showDenyButton: true,
+        showCancelButton: true,
+        confirmButtonText: 'Mulai Lagi',
+        denyButtonText: 'Lihat Statistik',
+        cancelButtonText: 'Selesai',
+        confirmButtonColor: '#667eea',
+        denyButtonColor: '#10b981',
+        cancelButtonColor: '#6b7280',
+        background: '#fff',
+        customClass: {
+            popup: 'rounded-2xl'
+        }
+    }).then((result) => {
+        if (result.isConfirmed) {
+            restartQuiz();
+        } else if (result.isDenied) {
+            // Buka halaman statistik di tab baru
+            window.open('/statistics', '_blank');
+        }
+    });
+}
+
+// Enhanced restart function
+function restartQuiz() {
+    currentQuestionIndex = 0;
+    score = 0;
+    quizResults = [];
+    document.getElementById('scoreDisplay').textContent = score;
+    
+    // Reset progress bar
+    const progressBar = document.querySelector('.progress-bar');
+    if (progressBar) {
+        progressBar.remove();
+    }
+    
+    displayQuestion();
+}
+
+// Tambahkan CSS animasi
+function addCustomStyles() {
+    const style = document.createElement('style');
+    style.textContent = `
+        @keyframes bounce {
+            0%, 20%, 53%, 80%, 100% {
+                transform: translate3d(0,0,0);
+            }
+            40%, 43% {
+                transform: translate3d(0,-10px,0);
+            }
+            70% {
+                transform: translate3d(0,-5px,0);
+            }
+            90% {
+                transform: translate3d(0,-2px,0);
+            }
+        }
+        
+        .animate-bounce {
+            animation: bounce 0.6s ease-in-out;
+        }
+        
+        .transition-all {
+            transition: all 0.3s ease;
+        }
+    `;
+    document.head.appendChild(style);
+}
+
+// Initialize quiz
+async function initializeQuiz() {
+    addCustomStyles();
+    await loadQuizData();
+    
+    // Acak urutan soal saat inisialisasi
+    quizData = shuffleQuestions(quizData);
+    
+    displayQuestion();
+    
+    console.log('Quiz initialized with', quizData.length, 'questions');
+}
+
+// Start quiz when page loads
+document.addEventListener('DOMContentLoaded', initializeQuiz);
+    </script>
+</body>
+</html>

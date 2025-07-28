@@ -1,0 +1,107 @@
+[
+    {
+        "type": "vocab_meaning",
+        "question": "肉",
+        "options": ["daging", "sayuran", "minuman", "buah"],
+        "correct": 0,
+        "subtext": "Pilih arti yang tepat"
+    },
+    {
+        "type": "vocab_meaning",
+        "question": "野菜",
+        "options": ["daging", "sayuran", "ikan", "telur"],
+        "correct": 1,
+        "subtext": "Pilih arti yang tepat"
+    },
+    {
+        "type": "vocab_meaning",
+        "question": "飲み物",
+        "options": ["makanan", "minuman", "piring", "gelas"],
+        "correct": 1,
+        "subtext": "Pilih arti yang tepat"
+    },
+    {
+        "type": "vocab_meaning",
+        "question": "お酒",
+        "options": ["air", "teh", "alkohol", "jus"],
+        "correct": 2,
+        "subtext": "Pilih arti yang tepat"
+    },
+    {
+        "type": "vocab_meaning",
+        "question": "料理",
+        "options": ["masakan", "bahan", "alat", "tempat"],
+        "correct": 0,
+        "subtext": "Pilih arti yang tepat"
+    },
+    {
+        "type": "meaning_vocab",
+        "question": "Gelas",
+        "options": ["お皿", "コップ", "わりばし", "ごみ袋"],
+        "correct": 1,
+        "subtext": "Pilih kosakata yang tepat"
+    },
+    {
+        "type": "meaning_vocab",
+        "question": "Piring",
+        "options": ["コップ", "お皿", "わりばし", "ナイフ"],
+        "correct": 1,
+        "subtext": "Pilih kosakata yang tepat"
+    },
+    {
+        "type": "meaning_vocab",
+        "question": "Telur",
+        "options": ["肉", "魚", "卵", "野菜"],
+        "correct": 2,
+        "subtext": "Pilih kosakata yang tepat"
+    },
+    {
+        "type": "meaning_vocab",
+        "question": "Udang",
+        "options": ["魚", "エビ", "イカ", "ホタテ"],
+        "correct": 1,
+        "subtext": "Pilih kosakata yang tepat"
+    },
+    {
+        "type": "vocab_reading",
+        "question": "肉",
+        "options": ["にく", "やさい", "のみもの", "さかな"],
+        "correct": 0,
+        "subtext": "Pilih cara baca yang tepat"
+    },
+    {
+        "type": "vocab_reading",
+        "question": "野菜",
+        "options": ["にく", "やさい", "りょうり", "たまご"],
+        "correct": 1,
+        "subtext": "Pilih cara baca yang tepat"
+    },
+    {
+        "type": "vocab_reading",
+        "question": "飲み物",
+        "options": ["たべもの", "のみもの", "りょうり", "ざいりょう"],
+        "correct": 1,
+        "subtext": "Pilih cara baca yang tepat"
+    },
+    {
+        "type": "reading_meaning",
+        "question": "やきとり",
+        "options": ["ayam bakar", "sate ayam", "ayam goreng", "sup ayam"],
+        "correct": 1,
+        "subtext": "Pilih arti yang tepat"
+    },
+    {
+        "type": "reading_meaning",
+        "question": "からあげ",
+        "options": ["ayam panggang", "ayam goreng tepung", "ayam rebus", "ayam bakar"],
+        "correct": 1,
+        "subtext": "Pilih arti yang tepat"
+    },
+    {
+        "type": "reading_meaning",
+        "question": "デザート",
+        "options": ["makanan pembuka", "makanan utama", "makanan penutup", "minuman"],
+        "correct": 2,
+        "subtext": "Pilih arti yang tepat"
+    }
+]
