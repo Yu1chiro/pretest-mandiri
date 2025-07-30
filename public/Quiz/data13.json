@@ -1,0 +1,142 @@
+[
+    {
+        "type": "vocab_meaning",
+        "question": "電気",
+        "options": ["mesin", "lampu/listrik", "angka", "suara"],
+        "correct": 1,
+        "subtext": "Pilih arti yang tepat"
+    },
+    {
+        "type": "vocab_meaning",
+        "question": "資料",
+        "options": ["dokumen", "rak", "pintu", "rapat"],
+        "correct": 0,
+        "subtext": "Pilih arti yang tepat"
+    },
+    {
+        "type": "vocab_meaning",
+        "question": "変更",
+        "options": ["pemberitahuan", "perihal", "perubahan", "lokasi"],
+        "correct": 2,
+        "subtext": "Pilih arti yang tepat"
+    },
+    {
+        "type": "vocab_meaning",
+        "question": "数字",
+        "options": ["tombol", "kertas", "jumlah lembar", "angka"],
+        "correct": 3,
+        "subtext": "Pilih arti yang tepat"
+    },
+    {
+        "type": "vocab_meaning",
+        "question": "都合が悪い",
+        "options": ["tidak apa-apa", "berhalangan", "perlu diperhatikan", "lokasi berubah"],
+        "correct": 1,
+        "subtext": "Pilih arti yang tepat"
+    },
+    {
+        "type": "meaning_vocab",
+        "question": "Menekan",
+        "options": ["押す", "開ける", "戻す", "入れる"],
+        "correct": 0,
+        "subtext": "Pilih kosakata yang tepat"
+    },
+    {
+        "type": "meaning_vocab",
+        "question": "Gudang",
+        "options": ["管理室", "会議室", "倉庫", "会社"],
+        "correct": 2,
+        "subtext": "Pilih kosakata yang tepat"
+    },
+    {
+        "type": "meaning_vocab",
+        "question": "Rapat",
+        "options": ["資料", "準備", "連絡", "会議"],
+        "correct": 3,
+        "subtext": "Pilih kosakata yang tepat"
+    },
+    {
+        "type": "meaning_vocab",
+        "question": "Mesin fotokopi",
+        "options": ["パソコン", "プロジェクタ", "エアコン", "コピー機"],
+        "correct": 3,
+        "subtext": "Pilih kosakata yang tepat"
+    },
+    {
+        "type": "meaning_vocab",
+        "question": "Perusahaan perbaikan/agen",
+        "options": ["会社", "上司", "部下", "業者"],
+        "correct": 3,
+        "subtext": "Pilih kosakata yang tepat"
+    },
+    {
+        "type": "vocab_reading",
+        "question": "動く",
+        "options": ["つかう", "うごく", "おわる", "わるい"],
+        "correct": 1,
+        "subtext": "Pilih cara baca yang tepat"
+    },
+    {
+        "type": "vocab_reading",
+        "question": "会議",
+        "options": ["かいぎ", "しりょう", "じゅんび", "れんらく"],
+        "correct": 0,
+        "subtext": "Pilih cara baca yang tepat"
+    },
+    {
+        "type": "vocab_reading",
+        "question": "使う",
+        "options": ["おす", "もどす", "あける", "つかう"],
+        "correct": 3,
+        "subtext": "Pilih cara baca yang tepat"
+    },
+    {
+        "type": "vocab_reading",
+        "question": "音",
+        "options": ["おと", "おとこ", "おんな", "おゆ"],
+        "correct": 0,
+        "subtext": "Pilih cara baca yang tepat"
+    },
+    {
+        "type": "vocab_reading",
+        "question": "机",
+        "options": ["いす", "たな", "つくえ", "とびら"],
+        "correct": 2,
+        "subtext": "Pilih cara baca yang tepat"
+    },
+    {
+        "type": "reading_meaning",
+        "question": "さいきどう",
+        "options": ["mematikan", "menyalakan", "restart/reboot", "menghubungi"],
+        "correct": 2,
+        "subtext": "Pilih arti yang tepat"
+    },
+    {
+        "type": "reading_meaning",
+        "question": "しろくろ",
+        "options": ["berwarna", "hitam putih", "dua sisi", "satu sisi"],
+        "correct": 1,
+        "subtext": "Pilih arti yang tepat"
+    },
+    {
+        "type": "reading_meaning",
+        "question": "おしらせ",
+        "options": ["pemberitahuan", "perubahan", "perihal", "jadwal"],
+        "correct": 0,
+        "subtext": "Pilih arti yang tepat"
+    },
+    {
+        "type": "reading_meaning",
+        "question": "そうこ",
+        "options": ["ruang rapat", "ruang manajer", "gudang", "kantor"],
+        "correct": 2,
+        "subtext": "Pilih arti yang tepat"
+    },
+    {
+        "type": "reading_meaning",
+        "question": "りょうめん",
+        "options": ["satu sisi", "berwarna", "hitam putih", "dua sisi"],
+        "correct": 3,
+        "subtext": "Pilih arti yang tepat"
+    }
+]
