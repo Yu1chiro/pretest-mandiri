@@ -24,6 +24,21 @@ app.get('/quiz12', (req, res) => {
 app.get('/quiz13', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'quiz13.html'));
 });
+app.get('/quiz14', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'quiz14.html'));
+});
+app.get('/quiz15', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'quiz15.html'));
+});
+app.get('/quiz16', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'quiz16.html'));
+});
+app.get('/quiz17', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'quiz17.html'));
+});
+app.get('/quiz18', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'quiz18.html'));
+});
 app.get('/statistics', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'statistics.html'));
 });

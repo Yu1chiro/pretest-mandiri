@@ -1,0 +1,171 @@
+[
+    {
+        "type": "vocab_meaning",
+        "question": "熱",
+        "options": ["air panas", "obat", "demam", "mandi"],
+        "correct": 2,
+        "subtext": "Pilih arti yang tepat"
+    },
+    {
+        "type": "vocab_meaning",
+        "question": "鼻水",
+        "options": ["mata", "air hidung", "bibir", "kuping"],
+        "correct": 1,
+        "subtext": "Pilih arti yang tepat"
+    },
+    {
+        "type": "vocab_meaning",
+        "question": "目がかゆい",
+        "options": ["mata merah", "mata pedas", "mata gatal", "mata berkedip"],
+        "correct": 2,
+        "subtext": "Pilih arti yang tepat"
+    },
+    {
+        "type": "vocab_meaning",
+        "question": "咳",
+        "options": ["flu", "pilek", "batuk", "demam"],
+        "correct": 2,
+        "subtext": "Pilih arti yang tepat"
+    },
+    {
+        "type": "vocab_meaning",
+        "question": "薬",
+        "options": ["perban", "minuman", "makanan", "obat"],
+        "correct": 3,
+        "subtext": "Pilih arti yang tepat"
+    },
+    {
+        "type": "meaning_vocab",
+        "question": "Obat batuk",
+        "options": ["熱の薬", "せきを抑える薬", "胃を守る薬", "痛み止め"],
+        "correct": 1,
+        "subtext": "Pilih kosakata yang tepat"
+    },
+    {
+        "type": "meaning_vocab",
+        "question": "Alergi serbuk sari",
+        "options": ["風邪", "骨折", "花粉症", "妊娠"],
+        "correct": 2,
+        "subtext": "Pilih kosakata yang tepat"
+    },
+    {
+        "type": "meaning_vocab",
+        "question": "Ruang pemeriksaan",
+        "options": ["診察室", "会議室", "食堂", "事務所"],
+        "correct": 0,
+        "subtext": "Pilih kosakata yang tepat"
+    },
+    {
+        "type": "meaning_vocab",
+        "question": "Gejala",
+        "options": ["検査", "症状", "診察", "病気"],
+        "correct": 1,
+        "subtext": "Pilih kosakata yang tepat"
+    },
+    {
+        "type": "meaning_vocab",
+        "question": "Kuesioner medis",
+        "options": ["処方せん", "問診票", "保険証", "診察券"],
+        "correct": 1,
+        "subtext": "Pilih kosakata yang tepat"
+    },
+    {
+        "type": "vocab_reading",
+        "question": "医者",
+        "options": ["いしゃ", "いし", "けんさ", "かんじゃ"],
+        "correct": 0,
+        "subtext": "Pilih cara baca yang tepat"
+    },
+    {
+        "type": "vocab_reading",
+        "question": "病院",
+        "options": ["びょうにん", "びょういん", "びよういん", "へいん"],
+        "correct": 1,
+        "subtext": "Pilih cara baca yang tepat"
+    },
+    {
+        "type": "vocab_reading",
+        "question": "症状",
+        "options": ["しょうじょう", "しょうちょう", "しゅうじょう", "じょうしょう"],
+        "correct": 0,
+        "subtext": "Pilih cara baca yang tepat"
+    },
+    {
+        "type": "vocab_reading",
+        "question": "花粉症",
+        "options": ["はなこしょう", "かふんしょう", "かふんびょう", "はなみずしょう"],
+        "correct": 1,
+        "subtext": "Pilih cara baca yang tepat"
+    },
+    {
+        "type": "vocab_reading",
+        "question": "薬局",
+        "options": ["くすりや", "やっきょく", "やくしょ", "くすりしょ"],
+        "correct": 1,
+        "subtext": "Pilih cara baca yang tepat"
+    },
+    {
+        "type": "reading_meaning",
+        "question": "ねつ",
+        "options": ["obat", "demam", "batuk", "perut"],
+        "correct": 1,
+        "subtext": "Pilih arti yang tepat"
+    },
+    {
+        "type": "reading_meaning",
+        "question": "びょうき",
+        "options": ["sehat", "gejala", "sakit/penyakit", "obat"],
+        "correct": 2,
+        "subtext": "Pilih arti yang tepat"
+    },
+    {
+        "type": "reading_meaning",
+        "question": "しんさつけん",
+        "options": ["kartu pasien", "surat dokter", "nomor antrian", "rujukan"],
+        "correct": 0,
+        "subtext": "Pilih arti yang tepat"
+    },
+    {
+        "type": "reading_meaning",
+        "question": "けんさ",
+        "options": ["periksa", "rujukan", "temu janji", "daftar"],
+        "correct": 0,
+        "subtext": "Pilih arti yang tepat"
+    },
+    {
+        "type": "reading_meaning",
+        "question": "もんしんひょう",
+        "options": ["formulir asuransi", "tiket masuk", "form pemeriksaan", "resep"],
+        "correct": 2,
+        "subtext": "Pilih arti yang tepat"
+    },
+    {
+    "type": "distractor_identification",
+    "question": "Pilih kata yang tidak termasuk gejala penyakit",
+    "options": ["吐き気", "せき", "診察券", "熱"],
+    "correct": 2,
+    "subtext": "Pilih yang tidak sesuai kategori"
+  },
+  {
+    "type": "distractor_identification",
+    "question": "Pilih kata yang tidak termasuk alat medis",
+    "options": ["注射", "レントゲン", "鼻水", "薬"],
+    "correct": 2,
+    "subtext": "Pilih yang tidak sesuai kategori"
+  },
+  {
+    "type": "distractor_identification",
+    "question": "Pilih kata yang tidak digunakan di rumah sakit",
+    "options": ["問診票", "診察室", "教科書", "処方せん"],
+    "correct": 2,
+    "subtext": "Pilih yang tidak sesuai kategori"
+  },
+  {
+    "type": "distractor_identification",
+    "question": "Pilih kata yang tidak sesuai dengan pekerjaan dirumah sakit",
+    "options": ["介護", "医者", "受付係", "教室"],
+    "correct": 3,
+    "subtext": "Pilih yang tidak sesuai kategori"
+  }
+
+]
