@@ -1,0 +1,170 @@
+[
+   {
+       "type": "vocab_meaning",
+       "question": "頭",
+       "options": ["kaki", "kepala", "tangan", "mata"],
+       "correct": 1,
+       "subtext": "Pilih arti yang tepat"
+   },
+   {
+       "type": "vocab_meaning",
+       "question": "肩",
+       "options": ["bahu", "lutut", "siku", "pergelangan"],
+       "correct": 0,
+       "subtext": "Pilih arti yang tepat"
+   },
+   {
+       "type": "vocab_meaning",
+       "question": "お腹",
+       "options": ["punggung", "dada", "perut", "pinggang"],
+       "correct": 2,
+       "subtext": "Pilih arti yang tepat"
+   },
+   {
+       "type": "vocab_meaning",
+       "question": "背中",
+       "options": ["dada", "punggung", "perut", "leher"],
+       "correct": 1,
+       "subtext": "Pilih arti yang tepat"
+   },
+   {
+       "type": "vocab_meaning",
+       "question": "薬",
+       "options": ["makanan", "minuman", "obat", "vitamin"],
+       "correct": 2,
+       "subtext": "Pilih arti yang tepat"
+   },
+   {
+       "type": "meaning_vocab",
+       "question": "Jogging",
+       "options": ["ウォーキング", "ジョギング", "プール", "ヨガ"],
+       "correct": 1,
+       "subtext": "Pilih kosakata yang tepat"
+   },
+   {
+       "type": "meaning_vocab",
+       "question": "Berenang",
+       "options": ["走る", "歩く", "泳ぐ", "起きる"],
+       "correct": 2,
+       "subtext": "Pilih kosakata yang tepat"
+   },
+   {
+       "type": "meaning_vocab",
+       "question": "Sayuran",
+       "options": ["野菜", "果物", "肉", "魚"],
+       "correct": 0,
+       "subtext": "Pilih kosakata yang tepat"
+   },
+   {
+       "type": "meaning_vocab",
+       "question": "Mabuk",
+       "options": ["風邪", "熱", "二日酔い", "頭痛"],
+       "correct": 2,
+       "subtext": "Pilih kosakata yang tepat"
+   },
+   {
+       "type": "meaning_vocab",
+       "question": "Pijat",
+       "options": ["マッサージ", "シャワー", "お風呂", "運動"],
+       "correct": 0,
+       "subtext": "Pilih kosakata yang tepat"
+   },
+   {
+       "type": "vocab_reading",
+       "question": "体",
+       "options": ["からだ", "あたま", "かお", "くち"],
+       "correct": 0,
+       "subtext": "Pilih cara baca yang tepat"
+   },
+   {
+       "type": "vocab_reading",
+       "question": "運動",
+       "options": ["うんとう", "うんどう", "おんどう", "えんどう"],
+       "correct": 1,
+       "subtext": "Pilih cara baca yang tepat"
+   },
+   {
+       "type": "vocab_reading",
+       "question": "健康",
+       "options": ["けんこう", "きんこう", "げんこう", "こんこう"],
+       "correct": 0,
+       "subtext": "Pilih cara baca yang tepat"
+   },
+   {
+       "type": "vocab_reading",
+       "question": "野菜",
+       "options": ["やそい", "のさい", "やさい", "やざい"],
+       "correct": 2,
+       "subtext": "Pilih cara baca yang tepat"
+   },
+   {
+       "type": "vocab_reading",
+       "question": "睡眠",
+       "options": ["すいめい", "すいみん", "しゅいみん", "すみん"],
+       "correct": 1,
+       "subtext": "Pilih cara baca yang tepat"
+   },
+   {
+       "type": "reading_meaning",
+       "question": "あたま",
+       "options": ["tangan", "kaki", "kepala", "mata"],
+       "correct": 2,
+       "subtext": "Pilih arti yang tepat"
+   },
+   {
+       "type": "reading_meaning",
+       "question": "かた",
+       "options": ["bahu", "siku", "lutut", "pergelangan"],
+       "correct": 0,
+       "subtext": "Pilih arti yang tepat"
+   },
+   {
+       "type": "reading_meaning",
+       "question": "くすり",
+       "options": ["makanan", "obat", "minuman", "vitamin"],
+       "correct": 1,
+       "subtext": "Pilih arti yang tepat"
+   },
+   {
+       "type": "reading_meaning",
+       "question": "うんどう",
+       "options": ["istirahat", "tidur", "olahraga", "makan"],
+       "correct": 2,
+       "subtext": "Pilih arti yang tepat"
+   },
+   {
+       "type": "reading_meaning",
+       "question": "やさい",
+       "options": ["buah", "daging", "sayuran", "ikan"],
+       "correct": 2,
+       "subtext": "Pilih arti yang tepat"
+   },
+   {
+       "type": "distractor_identification",
+       "question": "Pilih kata yang tidak termasuk bagian tubuh",
+       "options": ["頭", "肩", "薬", "足"],
+       "correct": 2,
+       "subtext": "Pilih yang tidak sesuai kategori"
+   },
+   {
+       "type": "distractor_identification",
+       "question": "Pilih kata yang tidak termasuk olahraga",
+       "options": ["ジョギング", "ヨガ", "ウォーキング", "お腹"],
+       "correct": 3,
+       "subtext": "Pilih yang tidak sesuai kategori"
+   },
+   {
+       "type": "distractor_identification",
+       "question": "Pilih kata yang tidak termasuk kegiatan kesehatan",
+       "options": ["運動する", "野菜を食べる", "早く寝る", "首"],
+       "correct": 3,
+       "subtext": "Pilih yang tidak sesuai kategori"
+   },
+   {
+       "type": "distractor_identification",
+       "question": "Pilih kata yang tidak berhubungan dengan tidur",
+       "options": ["早く寝る", "よく眠る", "睡眠", "マッサージ"],
+       "correct": 3,
+       "subtext": "Pilih yang tidak sesuai kategori"
+   }
+]
