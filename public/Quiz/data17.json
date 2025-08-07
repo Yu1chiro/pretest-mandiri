@@ -1,0 +1,142 @@
+[
+    {
+        "type": "vocab_meaning",
+        "question": "お土産",
+        "options": ["teh khas Jepang", "oleh-oleh; cendera mata", "bumbu", "gantungan kunci"],
+        "correct": 1,
+        "subtext": "Pilih arti yang tepat"
+    },
+    {
+        "type": "vocab_meaning",
+        "question": "経験",
+        "options": ["pengalaman", "hiasan", "boneka", "dinding"],
+        "correct": 0,
+        "subtext": "Pilih arti yang tepat"
+    },
+    {
+        "type": "vocab_meaning",
+        "question": "両親",
+        "options": ["putra", "istri", "orang tua", "anak (orang lain)"],
+        "correct": 2,
+        "subtext": "Pilih arti yang tepat"
+    },
+    {
+        "type": "vocab_meaning",
+        "question": "壁",
+        "options": ["dinding", "tas", "azimat", "topi"],
+        "correct": 0,
+        "subtext": "Pilih arti yang tepat"
+    },
+    {
+        "type": "vocab_meaning",
+        "question": "強い",
+        "options": ["indah", "buruk", "keren", "kuat"],
+        "correct": 3,
+        "subtext": "Pilih arti yang tepat"
+    },
+    {
+        "type": "meaning_vocab",
+        "question": "datang berkunjung (main)",
+        "options": ["上がる", "楽にする", "足をくずす", "遊びに来る"],
+        "correct": 3,
+        "subtext": "Pilih kosakata yang tepat"
+    },
+    {
+        "type": "meaning_vocab",
+        "question": "hadiah",
+        "options": ["お守り", "プレゼント", "人形", "写真集"],
+        "correct": 1,
+        "subtext": "Pilih kosakata yang tepat"
+    },
+    {
+        "type": "meaning_vocab",
+        "question": "bumbu",
+        "options": ["コーヒー", "お茶", "米", "調味料"],
+        "correct": 3,
+        "subtext": "Pilih kosakata yang tepat"
+    },
+    {
+        "type": "meaning_vocab",
+        "question": "Sama-sama.",
+        "options": ["ようこそ", "ごめんください", "こちらこそ", "おじゃましました"],
+        "correct": 2,
+        "subtext": "Pilih kosakata yang tepat"
+    },
+    {
+        "type": "meaning_vocab",
+        "question": "Terima kasih untuk hidangannya.",
+        "options": ["ごめんください", "おじゃまします", "ごちそうさまでした", "いらっしゃい"],
+        "correct": 2,
+        "subtext": "Pilih kosakata yang tepat"
+    },
+    {
+        "type": "vocab_reading",
+        "question": "経験",
+        "options": ["けいけん", "けけん", "けいげん", "けんけん"],
+        "correct": 0,
+        "subtext": "Pilih cara baca yang tepat"
+    },
+    {
+        "type": "vocab_reading",
+        "question": "お土産",
+        "options": ["おつちさん", "おどさん", "おみやげ", "おみあげ"],
+        "correct": 2,
+        "subtext": "Pilih cara baca yang tepat"
+    },
+    {
+        "type": "vocab_reading",
+        "question": "両親",
+        "options": ["りょしん", "りゅうしん", "りょうしん", "りょしん"],
+        "correct": 2,
+        "subtext": "Pilih cara baca yang tepat"
+    },
+    {
+        "type": "vocab_reading",
+        "question": "調味料",
+        "options": ["ちょうみりょう", "じょうみりょう", "ちょうみょうりょ", "ちょうりょう"],
+        "correct": 0,
+        "subtext": "Pilih cara baca yang tepat"
+    },
+    {
+        "type": "vocab_reading",
+        "question": "誕生日",
+        "options": ["たんじょび", "たんじょうび", "たんしょうび", "たんじょうひ"],
+        "correct": 1,
+        "subtext": "Pilih cara baca yang tepat"
+    },
+    {
+        "type": "reading_meaning",
+        "question": "すてき",
+        "options": ["keren", "kuat", "buruk", "indah/bagus"],
+        "correct": 3,
+        "subtext": "Pilih arti yang tepat"
+    },
+    {
+        "type": "reading_meaning",
+        "question": "おたく",
+        "options": ["pengalaman", "rumah; kediaman", "oleh-oleh", "orang tua"],
+        "correct": 1,
+        "subtext": "Pilih arti yang tepat"
+    },
+    {
+        "type": "reading_meaning",
+        "question": "くれる",
+        "options": ["mengunjungi", "mendapatkan", "datang berkunjung", "menerima (diberikan orang lain)"],
+        "correct": 3,
+        "subtext": "Pilih arti yang tepat"
+    },
+    {
+        "type": "reading_meaning",
+        "question": "かける (壁に～)",
+        "options": ["mengunjungi", "menerima", "menggantung", "disebut"],
+        "correct": 2,
+        "subtext": "Pilih arti yang tepat"
+    },
+    {
+        "type": "distractor_identification",
+        "question": "Pilih kata yang BUKAN merupakan oleh-oleh/hadiah",
+        "options": ["お守り", "人形", "経験", "ピアス"],
+        "correct": 2,
+        "subtext": "Pilih yang tidak sesuai kategori"
+    }
+]
